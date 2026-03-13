@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رؤية | للتوظيف والحلول البشرية</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        /* الجزء العلوي مع خلفية بانورامية */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.4)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        /* ناف بار شفاف */
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 8%;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        /* المحتوى الرئيسي */
+        .hero-content h1 {
+            font-size: 4rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        /* صندوق البحث الذكي */
+        .search-container {
+            background: white;
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+            width: 100%;
+            max-width: 700px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .search-container input {
+            flex: 1;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1rem;
+            outline: none;
+            border-radius: 50px;
+        }
+
+        .btn-search {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-search:hover {
+            background: #1d4ed8;
+            transform: scale(1.02);
+        }
+
+        /* مميزات الشركة */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 80px 8%;
+            background: white;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            background: #f1f5f9;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+
+        /* الموبايل */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .search-container { flex-direction: column; border-radius: 15px; padding: 20px; }
+            .btn-search { margin-top: 10px; }
+            .features { grid-template-columns: 1fr; }
+            nav { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <nav>
+            <div class="logo">رؤية<span>HR</span></div>
+            <div class="nav-links">
+                <a href="#">الوظائف</a>
+                <a href="#">للشركات</a>
+                <a href="#">السير الذاتية</a>
+                <a href="#">دخول</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <h1>ابنِ مستقبلك المهني <span>معنا</span></h1>
+            <p>نصل الكفاءات الطموحة بأفضل الشركات الرائدة في الشرق الأوسط.</p>
+            
+            <div class="search-container">
+                <input type="text" placeholder="ما هو المسمى الوظيفي الذي تبحث عنه؟">
+                <button class="btn-search">ابحث عن وظيفة</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="features">
+        <div class="feature-card">
+            <h3>🚀 توظيف سريع</h3>
+            <p>نظام ذكي يطابق مهاراتك مع متطلبات الوظائف المتاحة بدقة عالية.</p>
+        </div>
+        <div class="feature-card">
+            <h3>💼 كبرى الشركات</h3>
+            <p>شراكات استراتيجية مع أكثر من 500 شركة في مختلف القطاعات.</p>
+        </div>
+        <div class="feature-card">
+            <h3>📈 تطوير مهني</h3>
+            <p>نقدم استشارات مهنية لمساعدتك في كتابة السيرة الذاتية واجتياز المقابلات.</p>
+        </div>
+    </div>
+
+</body>
+</html>
